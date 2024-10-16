@@ -83,14 +83,14 @@ export function Requester({
     <div
       className={`${colors(verb).mainBG} p-2 rounded-lg border  drop-shadow-md w-full lg:w-2/3 xl:w-1/2`}
     >
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col-reverse gap-y-4 sm:flex-row sm:gap-y-1">
         <span className="flex place-items-center">
           <p
             className={`${colors(verb).verbBG} font-semibold rounded-md py-0.5 px-4 text-sm`}
           >
             {verb}
           </p>
-          <p className="px-3  font-semibold text-lg text-slate-700">
+          <p className="px-3 font-semibold text-lg text-slate-700">
             {!working && "(not working) "}
             {url}
           </p>
@@ -99,7 +99,7 @@ export function Requester({
           {(body || data) && (
             <button
               onClick={() => setShowInfo(!showInfo)}
-              className="bg-teal-500 rounded-lg py-0.5 px-3 text-teal-50"
+              className="font-semibold bg-teal-500 rounded-lg py-0.5 px-3 text-teal-50"
             >
               {showInfo ? "Hide" : "Show"}
             </button>
@@ -110,7 +110,7 @@ export function Requester({
               authentication
                 ? "bg-green-500 text-green-50"
                 : "bg-gray-400 text-gray-50"
-            } rounded-lg py-0.5 px-3`}
+            } rounded-lg py-0.5 px-3 font-semibold`}
             disabled={!authentication}
           >
             {authentication ? "Fetch" : "No auth"}

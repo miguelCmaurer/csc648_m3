@@ -212,7 +212,7 @@ export function Home() {
   ];
 
   return (
-    <div className="space-y-3 px-2">
+    <div className="w-full space-y-3 px-2 overflow-hidden">
       <div className="pt-2 flex flex-col w-full items-center space-y-3 ">
         <h3 className="text-4xl">/auth</h3>
         {authRequests.map((request, index) => (
